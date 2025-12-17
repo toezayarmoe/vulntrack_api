@@ -23,9 +23,7 @@ func main() {
 
 	protected.Use(middleware.JWTAuth())
 	{
-		protected.GET("/profile", func(ctx *gin.Context) {
-			ctx.JSON(200, gin.H{"message": "Authorized"})
-		})
+		protected.GET("/globalsummary", handler.GlobalSummary)
 	}
 	r.Run(":8080")
 }
