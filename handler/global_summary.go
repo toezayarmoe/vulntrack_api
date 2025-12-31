@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -38,6 +39,6 @@ func GlobalSummary(ctx *gin.Context) {
 		})
 		return
 	}
-
+	fmt.Println(result)
 	ctx.JSON(http.StatusOK, result)
 }

@@ -24,6 +24,8 @@ func main() {
 	protected.Use(middleware.JWTAuth())
 	{
 		protected.GET("/globalsummary", handler.GlobalSummary)
+		protected.GET("/fetchenv", handler.FetchEnvironment)
+		protected.GET("/reports", handler.GetReports)
 	}
 	r.Run(":8080")
 }
